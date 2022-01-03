@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - podman build --tag docker.io/forgiv/laravel:php7.2-node12 .
+  push:
+    cmds:
+      - podman push docker.io/forgiv/laravel:php7.2-node12

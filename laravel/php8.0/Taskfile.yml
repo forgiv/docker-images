@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - podman build --tag docker.io/forgiv/laravel:php8.0-node16 .
+  push:
+    cmds:
+      - podman push docker.io/forgiv/laravel:php8.0-node16

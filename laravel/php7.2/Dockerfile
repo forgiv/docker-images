@@ -23,7 +23,7 @@ RUN apt-get update \
 # Copy PHP-fpm pool config into container
 RUN mkdir -p /var/www
 RUN rm /etc/php/7.2/fpm/pool.d/www.conf
-COPY ../www.conf /etc/php/7.2/fpm/pool.d/www.conf
+COPY ./www.conf /etc/php/7.2/fpm/pool.d/www.conf
 # Setup Composer
 RUN cd /tmp \
     && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
