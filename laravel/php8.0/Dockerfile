@@ -23,7 +23,7 @@ RUN apt-get update \
 # Copy PHP-fpm pool config into container
 RUN mkdir -p /var/www
 RUN rm /etc/php/8.0/fpm/pool.d/www.conf
-COPY ./www.conf /etc/php/8.0/fpm/pool.d/www.conf
+COPY ../www.conf /etc/php/8.0/fpm/pool.d/www.conf
 # Setup Composer
 RUN cd /tmp \
     && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
@@ -31,7 +31,7 @@ RUN cd /tmp \
 # Setup NodeJS
 RUN apt-get install npm -y \
     && npm i -g n \
-    && n 14
+    && n 16
 # Install sudo
 RUN apt-get install sudo
 # Create new user `docker` and disable 
