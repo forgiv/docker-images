@@ -3,7 +3,7 @@ version: '3'
 tasks:
   build:
     cmds:
-      - podman build --tag docker.io/forgiv/laravel:php7.4-node14 .
+      - docker build --tag forgiv/laravel:php7.4-node14 .
   push:
     cmds:
-      - podman push docker.io/forgiv/laravel:php7.4-node14
+      - docker push forgiv/laravel:php7.4-node14

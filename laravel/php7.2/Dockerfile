@@ -5,6 +5,7 @@ RUN apt-get update \
     && add-apt-repository -y ppa:ondrej/php \
     && apt-get update \
     && apt-get install -y \
+        git \
         curl \
         zip \
         unzip \
